@@ -22,7 +22,7 @@ export default function EnquiryForm() {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/50 z-100 flex items-center justify-center">
           {/* 🔹 Animated Modal Box */}
           <motion.div
             initial={{ y: "-100vh", opacity: 0 }}
@@ -46,9 +46,9 @@ export default function EnquiryForm() {
 
             {/* Logo */}
             <div className="flex justify-center mb-2">
-              <Image 
-                src="/logo.webp" 
-                alt="Logo" 
+              <Image
+                src="/logo.webp"
+                alt="Logo"
                 width={100}
                 height={48}
                 className="h-12 w-auto"
@@ -56,16 +56,30 @@ export default function EnquiryForm() {
               />
             </div>
 
-            <p className="text-center text-[15px] mb-4 font-medium">
-              <span className="text-red-600 font-semibold">
+            <div className="text-center text-[15px] mb-4 font-medium">
+              <p className="text-red-600 font-semibold mb-2">
                 Register Here For Pre-Launch Offers!
-              </span>
-            </p>
+              </p>
+              {/* 🔹 Static Info Lines (no marquee) */}
+              <div className="mt-4 bg-linear-to-r from-[#eaf4ff] to-[#f5fbff] text-[#0268ae] py-1 text-center text-[13px] sm:text-[14px] font-lexend font-medium border-y border-blue-100 rounded-md space-y-1">
+                <p className="font-semibold text-[#135382] ">
+                  12% Annual Return (AR) for a 48-month term
+                </p>
+                <p className="text-[#0268ae]">
+                  9-year Lease Guarantee – Five-Star Hotel Chain
+                </p>
+              </div>
+            </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Full Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -78,7 +92,12 @@ export default function EnquiryForm() {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Phone Number
+                </label>
                 <input
                   type="tel"
                   id="phone"

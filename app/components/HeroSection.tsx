@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FormEvent } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function EnquiryFormCard() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -11,31 +11,42 @@ function EnquiryFormCard() {
   };
 
   return (
-    <div className="w-full max-w-sm bg-[#f5fbff] border-[3px] border-[#0073c6] shadow-xl">
-      {/* Top Blue Bar */}
+    <div className="w-full max-w-sm bg-[#f5fbff] border-[3px] border-[#0073c6] shadow-xl rounded-md overflow-hidden">
+      {/* 🔹 Top Blue Bar */}
       <div className="bg-[#0073c6] text-white text-center px-6 py-3">
         <p className="text-[18px] md:text-[20px] font-semibold">Omaxe Amausi</p>
       </div>
 
-      {/* Body */}
+      {/* 🔹 Body */}
       <div className="px-6 py-6 md:py-7">
         <div className="space-y-1 text-center">
           <p className="text-[16px] font-semibold text-gray-900">
             Retail Shops & Studio Apartments
           </p>
           <p className="text-[15px] text-gray-900 font-semibold">
-            Starting from ₹ 75 Lacs* Onwords
+            Starting from ₹ 75 Lacs* Onwards
           </p>
           <p className="mt-2 text-[14px] text-gray-700 flex items-center justify-center gap-1">
             <span>📍</span> Amausi, Lucknow
           </p>
         </div>
 
-        <p className="mt-4 mb-3 text-center text-[16px] font-semibold text-gray-900">
+        {/* 🔹 Static Info Lines (no marquee) */}
+        <div className="mt-4 bg-linear-to-r from-[#eaf4ff] to-[#f5fbff] text-[#0268ae] py-1 text-center text-[13px] sm:text-[14px] font-lexend font-medium border-y border-blue-100 rounded-md space-y-1">
+          <p className="font-semibold text-[#135382] ">
+            12% Annual Return (AR) for a 48-month term
+          </p>
+          <p className="text-[#0268ae]">
+            9-year Lease Guarantee – Five-Star Hotel Chain
+          </p>
+        </div>
+
+        {/* 🔹 Form Title */}
+        <p className="mt-5 mb-3 text-center text-[16px] font-semibold text-gray-900">
           Enquire Now
         </p>
 
-        {/* Form */}
+        {/* 🔹 Form */}
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
             type="text"
@@ -63,7 +74,7 @@ function EnquiryFormCard() {
               type="checkbox"
               id="privacy"
               defaultChecked
-              className="mt-[2px] h-4 w-4 accent-[#7b3aec]"
+              className="mt-[2px] h-4 w-4 accent-[#0073c6]"
             />
             <label htmlFor="privacy">
               By submitting I accept{" "}
