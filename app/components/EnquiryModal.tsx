@@ -27,7 +27,7 @@ export default function EnquiryForm() {
           <motion.div
             initial={{ y: "-100vh", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "-100vh", opacity: 0 }}
+            exit={{ y: "-100vh", opacity: 0, transition: { duration: 0.2 } }}
             transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
             className="relative bg-white w-[95%] max-w-lg rounded-lg shadow-xl p-6 md:p-8 z-50"
           >
