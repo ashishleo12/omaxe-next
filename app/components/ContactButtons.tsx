@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MdAddIcCall } from "react-icons/md";
 
 export default function ContactButtons() {
+  return (<></>)
   return (
     <>
       {/* 🔹 Floating Call Button */}
